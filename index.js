@@ -4,8 +4,14 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 require('dotenv').config();
 
+const crosConfig = {
+  origin:"*",
+  Credential:true,
+  methods:["GET","POST","PUT","DELETE","PATCH"]
+}
+
 const app = express()
-app.use(cors())
+app.use(cors(crosConfig))
 const Router = require("./router/indexRouter")
 const port = process.env.PORT || 5000
 database.connect();
