@@ -162,3 +162,6 @@ module.exports.LoginWithGoogle = async (req, res) =>{
    
 }
 
+module.exports.Test = (req, res)=>{
+res.json({code:200,message:"hello world"})
+}
