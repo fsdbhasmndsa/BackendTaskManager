@@ -4,7 +4,7 @@ const usercontroller = require("../controller/userController")
 const requireAuth = require("../midleware/auth.midleware")
 
 router.post("/register",usercontroller.Register)
-router.get("/findall",requireAuth.requireAuth,usercontroller.FindAll)
+router.get("/findall",usercontroller.FindAll)
 router.get("/Detail",requireAuth.requireAuth,usercontroller.GetDetailUser)
 router.post("/login",usercontroller.Login)
 router.post("/changepassword",usercontroller.ChangePassword)
