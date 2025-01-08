@@ -11,6 +11,7 @@ const crosConfig = {
 }
 
 const app = express()
+app.options("",cors(crosConfig))
 app.use(cors(crosConfig))
 const Router = require("./router/indexRouter")
 const port = process.env.PORT || 5000
