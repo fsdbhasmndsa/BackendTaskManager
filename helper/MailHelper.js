@@ -2,13 +2,13 @@ const nodemailer = require('nodemailer');
 
 
 
-const SendMail = (PersonReceive ,OTP,content) =>{
+const SendMail = async (PersonReceive ,OTP,content) =>{
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.Mail,
-          pass: process.env.PASSWORD
+          user: process.env.Mail || "loikogay2003@gmail.com",
+          pass: process.env.PASSWORD ||"qdloebhyknahpmrg"
         }
       });
 
@@ -19,7 +19,7 @@ const SendMail = (PersonReceive ,OTP,content) =>{
         html: content
       }
 
-      transporter.sendMail(mailOptions, function(error, info){
+       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
         } else {
