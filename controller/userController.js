@@ -155,7 +155,7 @@ module.exports.LoginWithGoogle = async (req, res) => {
 }
 
 module.exports.Test = async (req, res) => {
-    res.json({ code: 200, message: `hello word ${process.env.MONGGOURL}` })
+    res.json({ code: 200, message: `hello word ${process.env.Mail}` })
 }
 
 module.exports.UpdateAccount = async (req, res) => {
